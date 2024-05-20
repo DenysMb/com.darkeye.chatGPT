@@ -3,19 +3,17 @@
 *    SPDX-License-Identifier: LGPL-2.1-or-later
 */
 
-import QtQuick 2.3
-import QtQuick.Layouts 1.0
-import QtQuick.Controls 2.0
-import QtQuick.Dialogs 1.3
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.19 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
+import QtQuick.Dialogs
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.plasma.plasmoid
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.kirigami as Kirigami
+import QtWebEngine
 
-import QtWebEngine 1.9
-
-Item {
+PlasmoidItem {
 	id: root
 	property bool themeMismatch: false;
 	property int nextReloadTime: 0;
@@ -23,15 +21,15 @@ Item {
 	property int maxReloadRetiries: 25;
 	property bool loadedsuccessfully:false;
 
-	Plasmoid.compactRepresentation: CompactRepresentation {}
+	compactRepresentation: CompactRepresentation {}
 
-	Plasmoid.fullRepresentation: ColumnLayout {
+	fullRepresentation: ColumnLayout {
 		anchors.fill: parent
 
-		Layout.minimumWidth: 256 * PlasmaCore.Units.devicePixelRatio
-		Layout.minimumHeight:  512 * PlasmaCore.Units.devicePixelRatio
-		Layout.preferredWidth: 520 * PlasmaCore.Units.devicePixelRatio
-		Layout.preferredHeight: 840 * PlasmaCore.Units.devicePixelRatio
+		Layout.minimumWidth: 256
+		Layout.minimumHeight:  512
+		Layout.preferredWidth: 520
+		Layout.preferredHeight: 840
 
 		//-----------------------------  Helpers --------------------------------------------
 		// Added workaround by @zontafil thank you!

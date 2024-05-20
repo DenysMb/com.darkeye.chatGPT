@@ -1,8 +1,8 @@
-import QtQuick 2.3
-import QtQuick.Layouts 1.0
-import QtQuick.Dialogs 1.3
-import QtQuick.Controls 2.5 as QQC2
-import org.kde.kirigami 2.4 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Dialogs
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
 
 Kirigami.FormLayout {
     id: page
